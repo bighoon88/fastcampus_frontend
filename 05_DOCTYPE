@@ -1,0 +1,52 @@
+HTML 문서의 범위
+
+index.html 같은 HTML파일을 우리는 HTML 문서라고 표현할 수 있습니다.
+HTML 문서의 범위를 나타내는(의미하는) 태그들을 알아봅시다.
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        문서의 정보
+    </head>
+    <body>
+        문서의 구조
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="홍길동">
+    <meta name="description" content="우리 사이트가 최고!">
+    <title>내 사이트</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <section>
+        <h1></h1>
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
+
+DOCTYPE(DTD, 버전지정)
+DOCTYPE은 마크업 언어에서 문서 형식을 정의합니다.
+이는 웹 브라우저에 우리가 제공할 HTML 문서를 어떤 HTML 버전의 해석 방식으로 구조화하면 되는지를 알려줍니다.
+
+
+<!-- HTML 5 -->
+<!DOCTYPE html>
+
+<!-- XHTML 1.0 Transitional -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
