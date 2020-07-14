@@ -1,3 +1,6 @@
-div {
-    color: red;
+.box {
+    width: 300px;
+    height: 200px;
+    background: red;
+    font-size: 30px;
 }
