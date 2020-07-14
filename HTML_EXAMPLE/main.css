@@ -5,6 +5,7 @@ body {
 
 div {
     background: red;
-    width: auto;
-    height: auto;
+    width: 120px;
+    height: 80px;
+    display: inline;
 }
