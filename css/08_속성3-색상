@@ -1,0 +1,20 @@
+색상
+
+#color(글자 색상)
+
+요소 내용의 글자 색상을 지정합니다.
+
+div {
+    color: red;
+    글자색상: 빨강;
+}
+
+#background(요소 색상)
+
+요소의 배경 색상을 지정합니다.
+
+div {
+    background-color: red;
+    요소배경: 빨강;
+}
+
