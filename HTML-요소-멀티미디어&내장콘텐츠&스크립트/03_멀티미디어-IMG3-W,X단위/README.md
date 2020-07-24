@@ -1,0 +1,1 @@
+https://heropy.blog/2019/06/16/html-img-srcset-and-sizes/
