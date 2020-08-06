@@ -1,3 +1,5 @@
+InputSample.js
+
 import React , { useState }from 'react';
 
 function InputSample() {
@@ -45,3 +47,17 @@ function InputSample() {
 }
 
 export default InputSample;
+
+
+App.js
+
+import React from 'react';
+import InputSample from './InputSample';
+
+function App() {
+  return (
+    <InputSample />
+  );
+}
+
+export default App;
