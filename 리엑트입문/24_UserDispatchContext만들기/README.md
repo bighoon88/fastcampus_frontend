@@ -1,3 +1,9 @@
+Context API를 사용해서 어떤값을 UserList 안에 있는 user 컴포넌트에 직접 넣어 줄것인가
+onToggle과 onRemove 두가지 함수를 user 컴포넌트에 주기 위해서 UserList를 거쳐서 줘야 한다는 것
+
+
+App.js
+
 import React, { useRef, useReducer, useMemo, useCallback, createContext }from 'react';
 import UserList from './UserList';
 import CreateUser from './CreateUser';
@@ -106,3 +112,54 @@ function App() {
 }
 
 export default App;
+
+
+UserList.js
+
+import React, { useContext } from 'react';
+import { UserDispatch } from './App';
+
+const User = React.memo(function User({ user }) {
+    const { username, email, id, active } = user;
+    const dispatch = useContext(UserDispatch);
+
+    return (
+        <div>
+            <b style={{
+                color: active ? 'green' : 'black',
+                cursor: 'pointer'
+            }}
+            onClick={() => dispatch({
+                type: 'TOGGLE_USER',
+                id
+            })}>
+                {username}
+            </b>
+            &nbsp;
+            <span>({email})</span>
+            <button onClick={() => dispatch({
+                type: 'REMOVE_USER',
+                id
+            })}>삭제</button>
+        </div>
+    );
+});
+
+function UserList({ users }) {
+    return (
+        <div>
+            {
+                users.map(
+                    (user) => (
+                        <User
+                            user={user}
+                            key={user.id}
+                        />
+                    )
+                )
+            }
+        </div>
+    );
+}
+
+export default React.memo(UserList);
